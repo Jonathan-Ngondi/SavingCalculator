@@ -34,9 +34,15 @@ dependencies {
   api appDependencies.materialDesign
   implementation appDependencies.constraintLayout
   implementation appDependencies.supportAppCompat
+
   //Dagger
   implementation appDependencies.dagger
   kapt appDependencies.daggerCompiler
+
+  //Intuit
+  implementation appDependencies.intuitSsp
+  implementation appDependencies.intuitSdp
+
 
 
   //RxKotlin
