@@ -1,0 +1,52 @@
+ext {
+
+  //Android
+  androidBuildToolsVersion = "28.0.0"
+  androidMinSdkVersion = 21
+  androidTargetSdkVersion = 28
+  androidCompileSdkVersion = 28
+  supportLibraries = "28.0.0"
+
+  //Kotlin
+  kotlinVersion = "1.2.71"
+
+  //Design
+  materialComponent = "28.0.0-alpha3"
+  constraintLayout = "1.1.3"
+
+  //Dagger2
+  dagger2 = "2.14.1"
+  dagger2Annotations = "2.13"
+
+  //RxKotlin
+  rxKotlinVersion = "2.2.0"
+
+  //Testing
+  jUnit = "4.12"
+  assertJVersion = '3.11.0'
+  testRunner = "1.0.2"
+  espresso = "3.0.2"
+
+
+  appDependencies = [
+      kotlin: "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion",
+      materialDesign: "com.android.support:design:$materialComponent",
+      constraintLayout:"com.android.support.constraint:constraint-layout:$constraintLayout",
+      supportAppCompat:"com.android.support:appcompat-v7:$supportLibraries",
+      daggerSupport:"com.google.dagger:dagger-android-support:$dagger2",
+      dagger:"com.google.dagger:dagger:$dagger2",
+      daggerAnnotations:"com.google.dagger:dagger-compiler:$dagger2Annotations",
+      daggerCompiler:"com.google.dagger:dagger-compiler:$dagger2",
+      daggerAndroid:"com.google.dagger:dagger-android:$dagger2",
+      daggerAndroidProcessor: "com.google.dagger:dagger-android-processor:$dagger2",
+      rxKotlin: "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}",
+
+  ]
+
+  appTestDependencies = [
+      jUnit:"junit:junit:$jUnit",
+      testRunner: "com.android.support.test:runner:$testRunner",
+      espresso: "com.android.support.test.espresso:espresso-core:$espresso",
+
+  ]
+}

@@ -1,0 +1,49 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-kapt'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+  compileSdkVersion rootProject.ext.androidCompileSdkVersion
+  defaultConfig {
+    applicationId "com.mugiwara.savingcalculator"
+    minSdkVersion rootProject.ext.androidMinSdkVersion
+    targetSdkVersion rootProject.ext.androidCompileSdkVersion
+    versionCode 1
+    versionName "1.0"
+    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+}
+
+dependencies {
+  def appDependencies = rootProject.ext.appDependencies
+  def appTestingDependeincies = rootProject.ext.appTestDependencies
+
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
+  //App Dependencies
+  implementation appDependencies.kotlin
+  api appDependencies.materialDesign
+  implementation appDependencies.constraintLayout
+  implementation appDependencies.supportAppCompat
+  //Dagger
+  implementation appDependencies.dagger
+  kapt appDependencies.daggerCompiler
+
+
+  //RxKotlin
+  implementation appDependencies.rxKotlin
+
+  //Testing Dependencies
+  testImplementation appTestingDependeincies.jUnit
+  androidTestImplementation appTestingDependeincies.testRunner
+  androidTestImplementation appTestingDependeincies.espresso
+}

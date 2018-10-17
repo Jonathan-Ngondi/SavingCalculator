@@ -1,0 +1,4 @@
+<resources>
+  <string name="app_name">SavingCalculator</string>
+  <string name="calc_starting_amount">Starting Amount</string>
+</resources>
