@@ -6,6 +6,7 @@ ext {
   androidTargetSdkVersion = 28
   androidCompileSdkVersion = 28
   supportLibraries = "28.0.0"
+  lifecycleComponents = "1.1.1"
 
   //Kotlin
   kotlinVersion = "1.2.71"
@@ -14,12 +15,21 @@ ext {
   materialComponent = "28.0.0-alpha3"
   constraintLayout = "1.1.3"
 
+  //ButterKnife
+  butterKnifeVersion = "8.8.1"
+
   //Dagger2
   dagger2 = "2.14.1"
   dagger2Annotations = "2.13"
 
+  //Intuit
+  intuitVersion = "1.0.5"
+
   //RxKotlin
   rxKotlinVersion = "2.2.0"
+
+  //RxJava
+  rxJavaAndroid = "2.0.2"
 
   //Testing
   jUnit = "4.12"
@@ -39,7 +49,14 @@ ext {
       daggerCompiler:"com.google.dagger:dagger-compiler:$dagger2",
       daggerAndroid:"com.google.dagger:dagger-android:$dagger2",
       daggerAndroidProcessor: "com.google.dagger:dagger-android-processor:$dagger2",
-      rxKotlin: "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}",
+      rxKotlin: "io.reactivex.rxjava2:rxkotlin:$rxKotlinVersion",
+      rxAndroid:"io.reactivex.rxjava2:rxandroid:$rxJavaAndroid",
+      butterKnife:"com.jakewharton:butterknife:$butterKnifeVersion",
+      butterKnifeAnnotations: "com.jakewharton:butterknife-compiler:$butterKnifeVersion",
+      intuitSdp:"com.intuit.sdp:sdp-android:$intuitVersion",
+      intuitSsp:"com.intuit.ssp:ssp-android:$intuitVersion",
+      lifecycleComponents: "android.arch.lifecycle:extensions:$lifecycleComponents",
+      recyclerView:"com.android.support:recyclerview-v7:$supportLibraries"
 
   ]
 
