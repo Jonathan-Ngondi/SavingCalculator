@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.mugiwara.savingcalculator.R
+import com.mugiwara.savingcalculator.calculator.viewmodel.CalculatorViewModel
 import kotlinx.android.synthetic.main.layout_deposits_and_totals.view.deposit_card_content
 import kotlinx.android.synthetic.main.layout_deposits_and_totals.view.deposit_card_title
 import kotlinx.android.synthetic.main.layout_deposits_and_totals.view.period_week_text
@@ -45,10 +46,11 @@ class CustomAdapter(val deposit: Int, val totals: List<Int>?, val context: Conte
   ) {
 
     holder.depositTitle.text = "Deposit"
-    val depositCalc = deposit*(position+1)
+    val depositCalc = CalculatorViewModel.kenyaShillingFormatter().format(deposit*(position+1))
     holder.depositContent.text = depositCalc.toString()
     holder.totalTitle.text = "Totals"
-    holder.totalContent.text = totals?.get(position)
+    val totalFormatted = CalculatorViewModel.kenyaShillingFormatter().format(totals?.get(position))
+    holder.totalContent.text = totalFormatted
         .toString()
     val week = "Week "+ (position+1).toString()
     holder.cardTitle.text = week
