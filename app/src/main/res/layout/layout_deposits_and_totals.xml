@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/_8sdp"
+    android:layout_height="wrap_content">
+
+  <android.support.v7.widget.CardView
+      android:id="@+id/savings_calc_period"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/_8sdp"
+      android:layout_marginStart="@dimen/_8sdp"
+      android:layout_marginTop="@dimen/_10sdp"
+      android:background="@color/colorPrimaryDark"
+      android:clickable="true"
+      android:focusable="true"
+      app:cardCornerRadius="@dimen/_5sdp"
+      app:cardPreventCornerOverlap="false"
+      >
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        >
+
+      <android.support.constraint.Guideline
+          android:id="@+id/guideline_start_card"
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:orientation="vertical"
+          app:layout_constraintGuide_percent="0.5"
+          />
+
+      <android.support.constraint.Guideline
+          android:id="@+id/guideline_end_card"
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:orientation="vertical"
+          app:layout_constraintGuide_percent="0.5"
+          />
+
+      <android.support.constraint.ConstraintLayout
+          android:id="@+id/period_title"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@color/colorPrimaryDark"
+          android:padding="@dimen/_4sdp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          >
+
+        <TextView
+            android:id="@+id/period_week_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:textSize="@dimen/_10ssp"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/period_title"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/AppTheme"
+            />
+
+      </android.support.constraint.ConstraintLayout>
+
+      <TextView
+          android:id="@+id/deposit_card_title"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="@dimen/_16ssp"
+          app:layout_constraintEnd_toEndOf="@id/guideline_start_card"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/period_title"
+          style="@style/AppTheme"
+          />
+
+      <TextView
+          android:id="@+id/deposit_card_content"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="@dimen/_8sdp"
+          android:textSize="@dimen/_14ssp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="@id/guideline_end_card"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/deposit_card_title"
+          style="@style/AppTheme"
+          />
+
+      <View
+          android:layout_width="@dimen/_20sdp"
+          android:layout_height="@dimen/_48sdp"
+          android:background="@drawable/ic_section_divider"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/period_title"
+          />
+
+      <TextView
+          android:id="@+id/totals_card_title"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="@dimen/_16ssp"
+          app:layout_constraintTop_toBottomOf="@id/period_title"
+          app:layout_constraintStart_toStartOf="@id/guideline_start_card"
+          app:layout_constraintEnd_toEndOf="parent"
+          style="@style/AppTheme"
+          />
+
+      <TextView
+          android:id="@+id/totals_card_content"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="@dimen/_14ssp"
+          android:layout_marginBottom="@dimen/_8sdp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="@id/guideline_start_card"
+          app:layout_constraintTop_toBottomOf="@id/totals_card_title"
+          style="@style/AppTheme"
+          />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+  </android.support.v7.widget.CardView>
+
+
+</android.support.constraint.ConstraintLayout>
