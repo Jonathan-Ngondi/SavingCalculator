@@ -1,3 +1,5 @@
 package com.mugiwara.savingcalculator.calculator.data
 
-internal class ProjectEntity
+class SavingsClass (
+  val listOfTotals: List<Int>
+)
