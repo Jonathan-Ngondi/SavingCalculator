@@ -46,6 +46,7 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:hint="@string/calc_starting_amount"
+      android:inputType="number"
       />
   </android.support.design.widget.TextInputLayout>
   <TextView
@@ -53,6 +54,7 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:text="@string/calc_total_saved"
+      android:textColor="@color/colorAccent"
       app:layout_constraintStart_toStartOf="@id/guidelineMid"
       app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
       app:layout_constraintTop_toTopOf="@id/edit_text_layout"
@@ -65,8 +67,9 @@
       android:layout_height="wrap_content"
       android:layout_marginStart="@dimen/_4sdp"
       android:layout_marginEnd="@dimen/_4sdp"
-      android:text="KES 27,375"
+      android:text="@string/calc_kes_0"
       android:gravity="center_horizontal"
+      android:textColor="@color/colorAccent"
       android:textSize="@dimen/_16ssp"
       app:layout_constraintTop_toBottomOf="@id/calc_yearly_total_label"
       app:layout_constraintBottom_toBottomOf="@id/edit_text_layout"
@@ -77,10 +80,10 @@
   <android.support.v7.widget.RecyclerView
       android:id="@+id/calc_recycler_view"
       android:layout_width="0dp"
-      android:layout_height="wrap_content"
+      android:layout_height="0dp"
       android:padding="@dimen/_8sdp"
       app:layout_constraintTop_toBottomOf="@id/edit_text_layout"
-
+      app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintLeft_toLeftOf="@id/guidelineStart"
       app:layout_constraintRight_toRightOf="@id/guidelineEnd"/>
 

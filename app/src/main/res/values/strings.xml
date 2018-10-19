@@ -1,5 +1,6 @@
 <resources>
   <string name="app_name">SavingCalculator</string>
   <string name="calc_starting_amount">Starting Amount</string>
-  <string name="calc_total_saved"><u>Total Saved</u></string>
+  <string name="calc_total_saved">Total Saved Yearly</string>
+  <string name="calc_kes_0">KES 0</string>
 </resources>
