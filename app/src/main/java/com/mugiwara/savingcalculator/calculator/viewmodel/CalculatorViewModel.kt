@@ -4,10 +4,25 @@ import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
 import com.mugiwara.savingcalculator.calculator.data.PeriodRepository
 import com.mugiwara.savingcalculator.calculator.data.SavingsClass
+import java.text.DecimalFormat
+import java.text.DecimalFormatSymbols
+import java.text.NumberFormat
 
 class CalculatorViewModel : ViewModel() {
 
   val total = MutableLiveData<Int>()
+
+  companion object {
+    fun kenyaShillingFormatter(): NumberFormat {
+      val df = NumberFormat.getCurrencyInstance()
+      val dfs = DecimalFormatSymbols()
+      dfs.currencySymbol = "KES "
+      dfs.groupingSeparator = '.'
+      dfs.monetaryDecimalSeparator = '.'
+      (df as DecimalFormat).decimalFormatSymbols = dfs
+      return df
+    }
+  }
 
 
   fun getTheTotalSavingsForAPeriod(weeks:Int, startingAmount:Int) : List<Int>{

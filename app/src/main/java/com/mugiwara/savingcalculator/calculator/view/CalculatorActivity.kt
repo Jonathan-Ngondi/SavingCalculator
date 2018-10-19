@@ -31,6 +31,8 @@ class CalculatorActivity : AppCompatActivity() {
 
   companion object {
     const val PERIOD_YEAR = 52
+
+
   }
 
   lateinit var viewModelFactory: ViewModelFactory
@@ -119,7 +121,7 @@ class CalculatorActivity : AppCompatActivity() {
     var totalText = totals?.get(51).toString()
 
     if(totalText.length>=4){
-      totalText = kenyaShillingFormatter().format(totalText.toInt()).toString()
+      totalText = CalculatorViewModel.kenyaShillingFormatter().format(totalText.toInt()).toString()
     }
     totalText.replace("£","KES",true)
     totalTextView.text = totalText
@@ -130,14 +132,6 @@ class CalculatorActivity : AppCompatActivity() {
 
   }
 
-  fun kenyaShillingFormatter():NumberFormat{
-    val df = NumberFormat.getCurrencyInstance()
-    val dfs = DecimalFormatSymbols()
-    dfs.currencySymbol = "KES "
-    dfs.groupingSeparator = '.'
-    dfs.monetaryDecimalSeparator = '.'
-    (df as DecimalFormat).decimalFormatSymbols = dfs
-    return df
-  }
+
 
 }
